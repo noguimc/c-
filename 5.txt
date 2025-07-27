@@ -1,0 +1,5 @@
+strcpy(a,b),将b复制到a
+strncpy(a,b,n),将b直到第n位复制到a
+strcat(a,b),将b拼接到a
+strncat(a,b,n),将b直到第n位拼接到a
+strlen(a)a的长度

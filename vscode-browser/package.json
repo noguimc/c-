@@ -1,0 +1,58 @@
+{
+    "name": "vscode-browser",
+    "displayName": "VSCode Browser",
+    "description": "A browser in VSCode sidebar",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onView:vscode-browser.browserView"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "vscode-browser",
+                    "title": "Browser",
+                    "icon": "media/icon.png"
+                }
+            ]
+        },
+        "views": {
+            "vscode-browser": [
+                {
+                    "type": "webview",
+                    "id": "vscode-browser.browserView",
+                    "name": "Browser"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "vscode-browser.refresh",
+                "title": "Refresh Browser"
+            },
+            {
+                "command": "vscode-browser.goBack",
+                "title": "Go Back"
+            },
+            {
+                "command": "vscode-browser.goForward",
+                "title": "Go Forward"
+            }
+        ]
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.60.0",
+        "eslint": "^8.1.0"
+    }
+}
