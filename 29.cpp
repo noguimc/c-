@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    int a[1000]={0},b;string n;
+    long long a[10000]={},b;string n;
     cin>>n>>b;
     int len=n.length();
     
