@@ -92,5 +92,6 @@
         "valarray": "cpp",
         "variant": "cpp"
     },
-    "Codegeex.RepoIndex": true
+    "Codegeex.RepoIndex": true,
+    "C_Cpp.default.compilerPath": "/home/noguimc/c++/0.1.cpp"
 }

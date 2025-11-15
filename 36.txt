@@ -1,0 +1,5 @@
+#memcpy(b,a,sizeof(a))
+    #memset(a,0,sizeof(a))可使用其他代替sizeof,实现部分清零
+    #accumulate(a,a+4,0)
+    #*min_element(起，末+1)
+    #*max_element(起，末+1)
