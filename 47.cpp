@@ -4,8 +4,8 @@ int main(){
     string a;
     cin>>a;
     
-    for(int i=1;i<7;i++){
-        if (a[0]==0){
+    for(int i=1;i<8;i++){
+        if (a[0]=='0'){
             cout<<a<<endl;
             break;
         }
@@ -17,9 +17,11 @@ int main(){
         }
 
     }
-    cout<<a;
-    for(int i=1;i<7;i++){
-        if (a[0]==0){
+    if (a[0]!='0'){
+        cout<<a<<endl;
+    }
+    for(int i=1;i<8;i++){
+        if (a[0]=='0'){
             cout<<a<<endl;
             break;
         }
@@ -35,6 +37,8 @@ int main(){
 
 
     }
-    cout<<a;
+    if (a[0]!='0'){
+        cout<<a;
+    }
     return 0;
 }
