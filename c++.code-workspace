@@ -113,6 +113,8 @@
 			"stdfloat": "cpp"
 		},
 		"Codegeex.GenerationPreference": "automatic",
-		"Codegeex.RepoIndex": true
+		"Codegeex.RepoIndex": true,
+		"trae.tab.enableRename": false,
+		"trae.tab.enableAutoImport": false
 	}
 }
