@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件互传系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo">
+                <i class="fas fa-exchange-alt"></i>
+                <h1>文件互传系统</h1>
+            </div>
+            <div class="connection-status">
+                <span id="status-indicator" class="status-indicator online"></span>
+                <span id="status-text">在线</span>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="upload-section">
+                <h2>上传文件 (最大支持1GB)</h2>
+                <div class="upload-area" id="drop-zone">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <p>拖放文件到此处或点击选择</p>
+                    <input type="file" id="file-input" multiple>
+                    <button class="upload-btn" id="upload-button">选择文件</button>
+                </div>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text">0%</span>
+                </div>
+            </section>
+
+            <section class="files-section">
+                <h2>文件列表</h2>
+                <div class="files-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="搜索文件...">
+                    </div>
+                    <button class="refresh-btn" id="refresh-btn">
+                        <i class="fas fa-sync-alt"></i> 刷新
+                    </button>
+                </div>
+                <div class="files-container">
+                    <div class="files-header">
+                        <span>文件名</span>
+                        <span>大小</span>
+                        <span>上传时间</span>
+                        <span>操作</span>
+                    </div>
+                    <div id="files-list" class="files-list">
+                        <!-- 文件列表将在这里动态生成 -->
+                        <div class="empty-state">
+                            <i class="fas fa-folder-open"></i>
+                            <p>暂无文件</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>© 2023 文件互传系统 - 开放端口: <span id="port">5000</span> - 最大文件大小: 1GB</p>
+        </footer>
+    </div>
+
+    <!-- 通知提示 -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="fas fa-info-circle"></i>
+            <span id="notification-message"></span>
+            <button class="notification-close" id="notification-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

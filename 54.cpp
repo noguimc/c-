@@ -1,0 +1,3 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){int year=0,month=0,day=0,is_leap=0;cin>>year>>month>>day;if(year%100==0){if(year%400==0){is_leap=1;}else{is_leap=0;}}else{if(year%4==0){is_leap=1;}else{is_leap=0;}}int days_in_month[]={0,31,28,31,30,31,30,31,31,30,31,30,31};if(is_leap==1){days_in_month[2]=29;}if(month<1||month>12||day<1||day>days_in_month[month]){cout<<"Invalid date"<<endl;return 0;}int day_of_year=0;for(int i=1;i<month;i++){day_of_year+=days_in_month[i];}day_of_year+=day;cout<<day_of_year<<endl;return 0;}

@@ -1,0 +1,6 @@
+Flask==2.3.3
+Werkzeug==2.3.7
+PyInstaller==6.1.0
+pystray==0.19.4
+Pillow==10.0.1
+psutil==5.9.5
